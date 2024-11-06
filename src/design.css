@@ -1,0 +1,65 @@
+.system {
+    display: flex;
+    font-size : 12px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #015E63;
+}
+
+.board {
+    border: 2px solid #000;
+    height: 80%;
+    text-align: center;
+    font-size: 24px; /* 調整字體大小 */
+    line-height: 2; /* 調整行間距 */
+    margin: 20px 10px;
+    padding: 10px 50px 350px 50px;
+    box-shadow: 2px 2px 4px #000;
+    background-size: 100%;
+}
+
+.board span:first-child {
+    position: relative;
+    top: 20px; /* 調整這裡的數值以確保文字在中間 */
+}
+
+.Register1, .Login1,.Home1 {
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 7px 20px;
+    margin-right: 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.Register1:hover, .Login1:hover, .Home1:hover {
+    box-shadow: rgba(44,187,99,.35) 0 -25px 18px -14px inset,rgba(44,187,99,.25) 0 1px 2px,rgba(44,187,99,.25) 0 2px 4px,rgba(44,187,99,.25) 0 4px 8px,rgba(44,187,99,.25) 0 8px 16px,rgba(44,187,99,.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+}
+
+
+.Boarder_line {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.register_border {
+    border: 1px solid #000;
+    box-shadow: 2px 2px 4px #000;
+    padding: 10px 20px 350px 20px;
+    margin: 50px 350px;
+    text-align: center;
+}
