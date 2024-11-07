@@ -1,7 +1,7 @@
 
 
 function Register_page() {
-  window.location.href = 'register_page.html'; // 跳轉到Register頁面
+  window.location.href = 'createAccount.html'; // 跳轉到Register頁面
 }
 
 function Login_page() {
@@ -21,7 +21,7 @@ function format_check(){
   if (Email.includes('@')) {
     document.getElementById('myForm').submit();
   }else if (Email.includes(' ') || Address.includes(' ') || Company.includes(' ') || Password.includes(' ')) {
-    window.location.href = 'register_page.html';
+    window.location.href = 'createAccount.html';
     document.getElementById('error').innerHTML = "Something is going wrong... please try again.";
   }
 }
