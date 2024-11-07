@@ -62,7 +62,7 @@
 
                 <!-- Unnamed (Image) -->
                 <div id="u1" class="ax_default image">
-                    <img id="u1_img" class="img " src="images/register_page/u1.png"/>
+                    <img id="u1_img" class="img " src="images/register_page/regen/u1.png"/>
                     <div id="u1_text" class="text " style="display:none; visibility: hidden">
                         <p></p>
                     </div>
@@ -105,6 +105,7 @@
                                     <div id="u7_div" class=""></div>
                                     <div id="u7_text" class="text ">
                                         <p><span>&nbsp;I want to become a partner,</span></p><p><span>&nbsp;Sign me up!</span></p>
+                                        <p id="error"></p>
                                     </div>
                                 </div>
 
@@ -140,43 +141,48 @@
                                     </div>
                                 </div>
 
-                                <!-- Unnamed (Text Field) -->
-                                <div id="u12" class="ax_default text_field1">
-                                    <div id="u12_div" class=""></div>
-                                    <input id="u12_input" type="text" value="" class="u12_input"/>
-                                </div>
-
-                                <!-- Unnamed (Text Field) -->
-                                <div id="u13" class="ax_default text_field1">
-                                    <div id="u13_div" class=""></div>
-                                    <input id="u13_input" type="text" value="" class="u13_input"/>
-                                </div>
-
-                                <!-- Unnamed (Text Field) -->
-                                <div id="u14" class="ax_default text_field1">
-                                    <div id="u14_div" class=""></div>
-                                    <input id="u14_input" type="text" value="" class="u14_input"/>
-                                </div>
-
-                                <!-- Unnamed (Text Field) -->
-                                <div id="u15" class="ax_default text_field1">
-                                    <div id="u15_div" class=""></div>
-                                    <input id="u15_input" type="text" value="" class="u15_input"/>
-                                </div>
-
-                                <!-- Unnamed (Rectangle) -->
-                                <div id="u16" class="ax_default shape">
-                                    <div id="u16_div" class=""></div>
-                                    <div id="u16_text" class="text ">
-                                        <p><span>Submit</span></p>
+                                <!-- Email (Text Field) -->
+                                <form method="get" action="login_page.html" Id="myForm">
+                                    <div id="u13" class="ax_default text_field1" data-label="Email">
+                                        <div id="u13_div" class=""></div>
+                                        <input id="u13_input" name="Email" type="text" value="" class="u13_input"/>
                                     </div>
-                                </div>
 
-                                <!-- Unnamed (Text Field) -->
-                                <div id="u17" class="ax_default text_field1">
-                                    <div id="u17_div" class=""></div>
-                                    <input id="u17_input" type="text" value="" class="u17_input"/>
-                                </div>
+                                    <!-- Telephone (Text Field) -->
+                                    <div id="u14" class="ax_default text_field1" data-label="Telephone">
+                                        <div id="u14_div" class=""></div>
+                                        <input id="u14_input" name="Telephone" type="text" value="" class="u14_input"/>
+                                    </div>
+
+                                    <!-- Company_name (Text Field) -->
+                                    <div id="u12" class="ax_default text_field1" data-label="Company_name">
+                                        <div id="u12_div" class=""></div>
+                                        <input id="u12_input" name="Company_name" type="text" value="" class="u12_input"/>
+                                    </div>
+
+                                    <!-- Password (Text Field) -->
+                                    <div id="u17" class="ax_default text_field1" data-label="Password">
+                                        <div id="u17_div" class=""></div>
+                                        <input id="u17_input" Name="Password" type="text" value="" class="u17_input"/>
+                                    </div>
+
+                                    <!-- Address (Text Field) -->
+                                    <div id="u15" class="ax_default text_field1" data-label="Address">
+                                        <div id="u15_div" class=""></div>
+                                        <input id="u15_input" name="Address" type="text" value="" class="u15_input"/>
+                                    </div>
+
+
+                                    <!-- Unnamed (Rectangle) -->
+                                    <div id="u16" class="ax_default shape">
+                                        <div id="u16_div" class=""></div>
+                                        <div id="u16_text" class="text ">
+                                            <p><span onclick="format_check()">Submit</span></p>
+                                        </div>
+                                    </div>
+                                </form>
+
+
 
                                 <!-- Unnamed (Rectangle) -->
                                 <div id="u18" class="ax_default label">
