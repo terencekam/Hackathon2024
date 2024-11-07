@@ -1,8 +1,7 @@
 package hk.terencekam.CathayHackaon.backend.SQL;
 
 import hk.terencekam.CathayHackaon.backend.Response;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 import org.json.JSONObject;
 
 import javax.json.JsonObject;
@@ -15,18 +14,14 @@ import static java.net.HttpURLConnection.*;
 
 public class Query {
     public static Connection connection;
-    private static final Logger logger = LogManager.getLogger(Query.class.getName());
     public Query() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Hackathon?useSSL=FALSE&autoReconnect=TRUE", "user", "12345678"); //query, drl#EspuD9ratiSwuvaprafIvu3tlphIq
-            logger.info("SQL:jdbc:mysql://localhost:3306/Genshin?useSSL=TRUE");
-            logger.info("SQL:jdbc:mysql://208.113.231.246:3306/genshin_acghk_org?useSSL=TRUE&autoReconnect=TRUE");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Hackathon?useSSL=FALSE&autoReconnect=TRUE", "user", "12345678");
 
         } catch (Exception e) {
-
-            logger.error(e, e);
+            e.printStackTrace();
         }
     }
 
@@ -61,7 +56,7 @@ public class Query {
 
     public Response getUser(String clientUserID){
         try{
-            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Client WHERE ClientID = ?");
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Client WHERE ClientUserID = ?");
             preparedStatement.setString(1 , clientUserID);
             preparedStatement.execute();
             ResultSet resultSet = preparedStatement.getResultSet();
@@ -79,8 +74,7 @@ public class Query {
                         .put("CompanyPhoneNo", resultSet.getString("CompanyPhoneNo"))
                         .put("AddressOne", resultSet.getString("AddressOne"))
                         .put("AddressTwo", resultSet.getString("AddressTwo"))
-                        .put("Type", resultSet.getString("Type"))
-                        .put("Activate", resultSet.getString("Activate")));
+                        .put("Type", resultSet.getString("Type")));
             }
             return new Response(HTTP_BAD_REQUEST, new JSONObject());
         }catch (Exception e){
